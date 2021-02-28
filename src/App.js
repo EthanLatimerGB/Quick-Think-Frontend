@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+//Dependencies
+import React, { useState } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+//Different view imports
+import WelcomePage from "./components/views/WelcomePage";
+import Appbar from "./components/appBar";
+import Login from "./components/views/LoginPage";
+import SignUpPage from "./components/views/SignUpPage";
+import PracticePage from './components/views/PracticePage';
+
+//Authentication Context
+import { AuthContext } from "./utils/AuthContext";
+
+const App = () => {
+	const [token, setToken] = useState(null);
+
+	return (
+		<AuthContext.Provider
+			value={{
+				token: token,
+				setToken: setToken,
+			}}
+		>
+			<BrowserRouter>
+				<Appbar />
+				<Switch>
+					<Route path="/practice/">
+						<PracticePage />
+					</Route>
+					<Route path="/signup/">
+						<SignUpPage />
+					</Route>
+					<Route path="/login/">
+						<Login />
+					</Route>
+					<Route path="/">
+						<WelcomePage />
+					</Route>
+				</Switch>
+			</BrowserRouter>
+		</AuthContext.Provider>
+	);
+};
 
 export default App;
