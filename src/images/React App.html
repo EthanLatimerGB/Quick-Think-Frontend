@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style>body {
+	background: linear-gradient(
+		130deg,
+		rgba(0, 2, 46, 1) 0%,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(219, 219, 219, 1) 100%
+	);
+	margin: 0%;
+	padding: 0%;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	height: 100%;
+}
+
+#root {
+	height: 100%;
+}
+
+html {
+	height: 100%;
+}
+
+h1 {
+	color: #1e7d92;
+	font-size: 4em;
+}
+
+h2 {
+	font-size: 3em;
+	font-weight: normal;
+}
+
+button {
+	background-color: #1e7d92;
+	font-size: 24px;
+	color: white;
+	border-radius: 20px;
+	padding: 20px 20px;
+	border: none;
+	text-align: center;
+	display: inline-block;
+	box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.25);
+}
+
+.appBar {
+	width: 100%;
+	top: 0;
+	overflow: hidden;
+	position: sticky;
+
+	background: #ffffff;
+	box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.25);
+}
+
+.appBarContainer {
+	flex-direction: row;
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+.appBarContainer a {
+	padding: 30px 0px;
+	text-align: center;
+	font-size: 24px;
+	text-decoration: none;
+	color: black;
+	float: right;
+}
+
+.appBarLinks a {
+	padding-left: 20px;
+}
+
+.appBarTitle a {
+	font-weight: bold;
+	color: #1e7d92;
+	float: left;
+}
+
+.mainWindow {
+	display: grid;
+	place-items: center;
+	height: 85%
+}
+
+.mainWindowContainer {
+	background-color: white;
+	border-radius: 10px;
+	height: 80%;
+	width: 80%;
+	box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.25);
+}
+
+.flexboxContainer {
+	height: 95%;
+	width: 98%;
+	margin: 10px;
+	display: flex;
+}
+
+.flexboxChildren {
+	flex: 1 1;
+}
+
+.lsContainer {
+	padding: 20px;
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lsLoadingIcon {
+	border: red 5px solid;
+	border-radius: 100%;
+	height: 60px;
+	width: 60px;
+	animation: spin 0.5s linear infinite;
+}
+
+.lsIconContainer {
+	text-align: center;
+}
+
+
+.singularItem {
+	padding: 10px;
+	border: lightgray solid 1px;
+	border-radius: 2px;
+}
+
+.list {
+	background-color: #efefef;
+	border-radius: 10px;
+	scroll-behavior: smooth;
+	overflow-y: scroll;
+	height: 100%;
+}
+
+.completedIcon {
+	height: 10px;
+	width: 10px;
+	border-radius: 5px;
+	background-color: red;
+}
+
+.itemText {
+	display: flex;
+	align-items: center;
+}
+
+.green {
+	background-color: green;
+}
+
+@keyframes spin {
+	0% {
+		border-color: red;
+		border-top: rgba(0, 0, 0, 0) 5px solid;
+		transform: rotate(0deg);
+	}
+	50% {
+		border-color: darkred;
+		border-top: rgba(0, 0, 0, 0) 5px solid;
+		transform: rotate(180deg);
+	}
+	100% {
+		border-color: red;
+		border-top: rgba(0, 0, 0, 0) 5px solid;
+		transform: rotate(360deg);
+	}
+} ;
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvc3R5bGVzLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtDQUNDOzs7OztFQUtDO0NBQ0QsVUFBVTtDQUNWLFdBQVc7Q0FDWCxnREFBZ0Q7Q0FDaEQsWUFBWTtBQUNiOztBQUVBO0NBQ0MsWUFBWTtBQUNiOztBQUVBO0NBQ0MsWUFBWTtBQUNiOztBQUVBO0NBQ0MsY0FBYztDQUNkLGNBQWM7QUFDZjs7QUFFQTtDQUNDLGNBQWM7Q0FDZCxtQkFBbUI7QUFDcEI7O0FBRUE7Q0FDQyx5QkFBeUI7Q0FDekIsZUFBZTtDQUNmLFlBQVk7Q0FDWixtQkFBbUI7Q0FDbkIsa0JBQWtCO0NBQ2xCLFlBQVk7Q0FDWixrQkFBa0I7Q0FDbEIscUJBQXFCO0NBQ3JCLGdEQUFnRDtBQUNqRDs7QUFFQTtDQUNDLFdBQVc7Q0FDWCxNQUFNO0NBQ04sZ0JBQWdCO0NBQ2hCLGdCQUFnQjs7Q0FFaEIsbUJBQW1CO0NBQ25CLGdEQUFnRDtBQUNqRDs7QUFFQTtDQUNDLG1CQUFtQjtDQUNuQixpQkFBaUI7Q0FDakIsZ0JBQWdCO0FBQ2pCOztBQUVBO0NBQ0MsaUJBQWlCO0NBQ2pCLGtCQUFrQjtDQUNsQixlQUFlO0NBQ2YscUJBQXFCO0NBQ3JCLFlBQVk7Q0FDWixZQUFZO0FBQ2I7O0FBRUE7Q0FDQyxrQkFBa0I7QUFDbkI7O0FBRUE7Q0FDQyxpQkFBaUI7Q0FDakIsY0FBYztDQUNkLFdBQVc7QUFDWjs7QUFFQTtDQUNDLGFBQWE7Q0FDYixtQkFBbUI7Q0FDbkI7QUFDRDs7QUFFQTtDQUNDLHVCQUF1QjtDQUN2QixtQkFBbUI7Q0FDbkIsV0FBVztDQUNYLFVBQVU7Q0FDVixnREFBZ0Q7QUFDakQ7O0FBRUE7Q0FDQyxXQUFXO0NBQ1gsVUFBVTtDQUNWLFlBQVk7Q0FDWixhQUFhO0FBQ2Q7O0FBRUE7Q0FDQyxTQUFPO0FBQ1I7O0FBRUE7Q0FDQyxhQUFhO0NBQ2IsV0FBVztDQUNYLGFBQWE7Q0FDYix1QkFBdUI7Q0FDdkIsbUJBQW1CO0FBQ3BCOztBQUVBO0NBQ0MscUJBQXFCO0NBQ3JCLG1CQUFtQjtDQUNuQixZQUFZO0NBQ1osV0FBVztDQUNYLG9DQUFvQztBQUNyQzs7QUFFQTtDQUNDLGtCQUFrQjtBQUNuQjs7O0FBR0E7Q0FDQyxhQUFhO0NBQ2IsMkJBQTJCO0NBQzNCLGtCQUFrQjtBQUNuQjs7QUFFQTtDQUNDLHlCQUF5QjtDQUN6QixtQkFBbUI7Q0FDbkIsdUJBQXVCO0NBQ3ZCLGtCQUFrQjtDQUNsQixZQUFZO0FBQ2I7O0FBRUE7Q0FDQyxZQUFZO0NBQ1osV0FBVztDQUNYLGtCQUFrQjtDQUNsQixxQkFBcUI7QUFDdEI7O0FBRUE7Q0FDQyxhQUFhO0NBQ2IsbUJBQW1CO0FBQ3BCOztBQUVBO0NBQ0MsdUJBQXVCO0FBQ3hCOztBQUVBO0NBQ0M7RUFDQyxpQkFBaUI7RUFDakIsc0NBQXNDO0VBQ3RDLHVCQUF1QjtDQUN4QjtDQUNBO0VBQ0MscUJBQXFCO0VBQ3JCLHNDQUFzQztFQUN0Qyx5QkFBeUI7Q0FDMUI7Q0FDQTtFQUNDLGlCQUFpQjtFQUNqQixzQ0FBc0M7RUFDdEMseUJBQXlCO0NBQzFCO0FBQ0QiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcblx0YmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KFxuXHRcdDEzMGRlZyxcblx0XHRyZ2JhKDAsIDIsIDQ2LCAxKSAwJSxcblx0XHRyZ2JhKDI1NSwgMjU1LCAyNTUsIDEpIDAlLFxuXHRcdHJnYmEoMjE5LCAyMTksIDIxOSwgMSkgMTAwJVxuXHQpO1xuXHRtYXJnaW46IDAlO1xuXHRwYWRkaW5nOiAwJTtcblx0Zm9udC1mYW1pbHk6IFZlcmRhbmEsIEdlbmV2YSwgVGFob21hLCBzYW5zLXNlcmlmO1xuXHRoZWlnaHQ6IDEwMCU7XG59XG5cbiNyb290IHtcblx0aGVpZ2h0OiAxMDAlO1xufVxuXG5odG1sIHtcblx0aGVpZ2h0OiAxMDAlO1xufVxuXG5oMSB7XG5cdGNvbG9yOiAjMWU3ZDkyO1xuXHRmb250LXNpemU6IDRlbTtcbn1cblxuaDIge1xuXHRmb250LXNpemU6IDNlbTtcblx0Zm9udC13ZWlnaHQ6IG5vcm1hbDtcbn1cblxuYnV0dG9uIHtcblx0YmFja2dyb3VuZC1jb2xvcjogIzFlN2Q5Mjtcblx0Zm9udC1zaXplOiAyNHB4O1xuXHRjb2xvcjogd2hpdGU7XG5cdGJvcmRlci1yYWRpdXM6IDIwcHg7XG5cdHBhZGRpbmc6IDIwcHggMjBweDtcblx0Ym9yZGVyOiBub25lO1xuXHR0ZXh0LWFsaWduOiBjZW50ZXI7XG5cdGRpc3BsYXk6IGlubGluZS1ibG9jaztcblx0Ym94LXNoYWRvdzogMHB4IDBweCAzMHB4IDVweCByZ2JhKDAsIDAsIDAsIDAuMjUpO1xufVxuXG4uYXBwQmFyIHtcblx0d2lkdGg6IDEwMCU7XG5cdHRvcDogMDtcblx0b3ZlcmZsb3c6IGhpZGRlbjtcblx0cG9zaXRpb246IHN0aWNreTtcblxuXHRiYWNrZ3JvdW5kOiAjZmZmZmZmO1xuXHRib3gtc2hhZG93OiAwcHggMHB4IDMwcHggNXB4IHJnYmEoMCwgMCwgMCwgMC4yNSk7XG59XG5cbi5hcHBCYXJDb250YWluZXIge1xuXHRmbGV4LWRpcmVjdGlvbjogcm93O1xuXHRtYXJnaW4tcmlnaHQ6IDEwJTtcblx0bWFyZ2luLWxlZnQ6IDEwJTtcbn1cblxuLmFwcEJhckNvbnRhaW5lciBhIHtcblx0cGFkZGluZzogMzBweCAwcHg7XG5cdHRleHQtYWxpZ246IGNlbnRlcjtcblx0Zm9udC1zaXplOiAyNHB4O1xuXHR0ZXh0LWRlY29yYXRpb246IG5vbmU7XG5cdGNvbG9yOiBibGFjaztcblx0ZmxvYXQ6IHJpZ2h0O1xufVxuXG4uYXBwQmFyTGlua3MgYSB7XG5cdHBhZGRpbmctbGVmdDogMjBweDtcbn1cblxuLmFwcEJhclRpdGxlIGEge1xuXHRmb250LXdlaWdodDogYm9sZDtcblx0Y29sb3I6ICMxZTdkOTI7XG5cdGZsb2F0OiBsZWZ0O1xufVxuXG4ubWFpbldpbmRvdyB7XG5cdGRpc3BsYXk6IGdyaWQ7XG5cdHBsYWNlLWl0ZW1zOiBjZW50ZXI7XG5cdGhlaWdodDogODUlXG59XG5cbi5tYWluV2luZG93Q29udGFpbmVyIHtcblx0YmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG5cdGJvcmRlci1yYWRpdXM6IDEwcHg7XG5cdGhlaWdodDogODAlO1xuXHR3aWR0aDogODAlO1xuXHRib3gtc2hhZG93OiAwcHggMHB4IDMwcHggNXB4IHJnYmEoMCwgMCwgMCwgMC4yNSk7XG59XG5cbi5mbGV4Ym94Q29udGFpbmVyIHtcblx0aGVpZ2h0OiA5NSU7XG5cdHdpZHRoOiA5OCU7XG5cdG1hcmdpbjogMTBweDtcblx0ZGlzcGxheTogZmxleDtcbn1cblxuLmZsZXhib3hDaGlsZHJlbiB7XG5cdGZsZXg6IDE7XG59XG5cbi5sc0NvbnRhaW5lciB7XG5cdHBhZGRpbmc6IDIwcHg7XG5cdGhlaWdodDogODAlO1xuXHRkaXNwbGF5OiBmbGV4O1xuXHRqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcblx0YWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLmxzTG9hZGluZ0ljb24ge1xuXHRib3JkZXI6IHJlZCA1cHggc29saWQ7XG5cdGJvcmRlci1yYWRpdXM6IDEwMCU7XG5cdGhlaWdodDogNjBweDtcblx0d2lkdGg6IDYwcHg7XG5cdGFuaW1hdGlvbjogc3BpbiAwLjVzIGxpbmVhciBpbmZpbml0ZTtcbn1cblxuLmxzSWNvbkNvbnRhaW5lciB7XG5cdHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuXG4uc2luZ3VsYXJJdGVtIHtcblx0cGFkZGluZzogMTBweDtcblx0Ym9yZGVyOiBsaWdodGdyYXkgc29saWQgMXB4O1xuXHRib3JkZXItcmFkaXVzOiAycHg7XG59XG5cbi5saXN0IHtcblx0YmFja2dyb3VuZC1jb2xvcjogI2VmZWZlZjtcblx0Ym9yZGVyLXJhZGl1czogMTBweDtcblx0c2Nyb2xsLWJlaGF2aW9yOiBzbW9vdGg7XG5cdG92ZXJmbG93LXk6IHNjcm9sbDtcblx0aGVpZ2h0OiAxMDAlO1xufVxuXG4uY29tcGxldGVkSWNvbiB7XG5cdGhlaWdodDogMTBweDtcblx0d2lkdGg6IDEwcHg7XG5cdGJvcmRlci1yYWRpdXM6IDVweDtcblx0YmFja2dyb3VuZC1jb2xvcjogcmVkO1xufVxuXG4uaXRlbVRleHQge1xuXHRkaXNwbGF5OiBmbGV4O1xuXHRhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4uZ3JlZW4ge1xuXHRiYWNrZ3JvdW5kLWNvbG9yOiBncmVlbjtcbn1cblxuQGtleWZyYW1lcyBzcGluIHtcblx0MCUge1xuXHRcdGJvcmRlci1jb2xvcjogcmVkO1xuXHRcdGJvcmRlci10b3A6IHJnYmEoMCwgMCwgMCwgMCkgNXB4IHNvbGlkO1xuXHRcdHRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xuXHR9XG5cdDUwJSB7XG5cdFx0Ym9yZGVyLWNvbG9yOiBkYXJrcmVkO1xuXHRcdGJvcmRlci10b3A6IHJnYmEoMCwgMCwgMCwgMCkgNXB4IHNvbGlkO1xuXHRcdHRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7XG5cdH1cblx0MTAwJSB7XG5cdFx0Ym9yZGVyLWNvbG9yOiByZWQ7XG5cdFx0Ym9yZGVyLXRvcDogcmdiYSgwLCAwLCAwLCAwKSA1cHggc29saWQ7XG5cdFx0dHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcblx0fVxufSA7XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="appBar"><div class="appBarContainer"><div class="appBarTitle"><a class="title" href="http://localhost:3000/">Quick Think</a></div><div class="appBarLinks"><a href="http://localhost:3000/login/">Login</a><a href="http://localhost:3000/signup/">Sign Up</a></div></div></div><div>Error has occured</div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="React%20App_files/bundle.js"></script><script src="React%20App_files/vendorsmain.js"></script><script src="React%20App_files/main.js"></script>
+
+</body></html>

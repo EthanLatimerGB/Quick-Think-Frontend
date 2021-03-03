@@ -27,7 +27,7 @@ const Appbar = () => {
 			return (
 				<div className="appBarLinks">
 					<Link to="/practice/">Practice</Link>
-					<Link to="/list/">My List</Link>
+					<Link to="/mylist/">My List</Link>
 					<Link to="/settings/">Settings</Link>
 					<button onClick={handleLogout}>Log out</button>
 				</div>

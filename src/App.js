@@ -8,6 +8,8 @@ import Appbar from "./components/appBar";
 import Login from "./components/views/LoginPage";
 import SignUpPage from "./components/views/SignUpPage";
 import PracticePage from './components/views/PracticePage';
+import MyListPage from './components/views/MyListPage';
+import SettingsPage from './components/views/SettingsPage';
 
 //Authentication Context
 import { AuthContext } from "./utils/AuthContext";
@@ -25,6 +27,12 @@ const App = () => {
 			<BrowserRouter>
 				<Appbar />
 				<Switch>
+					<Route path="/settings/">
+						<SettingsPage />
+					</Route>
+					<Route path="/mylist/">
+						<MyListPage />
+					</Route>
 					<Route path="/practice/">
 						<PracticePage />
 					</Route>
